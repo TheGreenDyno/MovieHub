@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title>MovieHub</title>
 </head>
+
 <body>
-    
+    <nav id="navBar">
+        <div id="container-navBar">
+            <input id="searchBar" type="text" placeholder="search">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </nav>
+    <section id="section-main">
+        <template id="movie-template">
+            <div id="container-movie">
+                <img id="movie-image" alt="movie-image"/>
+                <div id="movie-title">spiderman</div>
+                <div id="movie-year">2021</div>
+            </div>
+        </template>
+    </section>
+
 </body>
 <script src="/scripts/index.js"></script>
+
 </html>
