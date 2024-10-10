@@ -33,14 +33,13 @@ async function fetcher() {
     results.forEach(result => {
       const clone = template.content.cloneNode(true)
       let imagePath = result.poster_path
-      const imageUrl = `${imageBaseURL}${imagePath}`
+      const imageUrl=imagePath ? `${imageBaseURL}${imagePath}`: "/assets/defaultImage.png";
       clone.querySelector("#movie-image").src = imageUrl
       clone.querySelector("#movie-title").textContent = result.title
       clone.querySelector("#movie-year").textContent = result.release_date;
       sectionMain.appendChild(clone);
     })
     if(results.length===0){
-      
       sectionMain.innerHTML= "<h1>Movie Not Found</h1>"
       console.log("not found")
     }

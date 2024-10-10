@@ -72,13 +72,21 @@ body {
     color: white;
     text-align: center;
     align-items: center;
+    justify-content: space-evenly;
    
 }
 #container-movie{
     margin:1rem;
-    border: 0.1rem solid white ;
+    border: 0.1rem solid rgb(19, 19, 19);
     height: 19rem;
-    width: 13rem;
+    width: 12rem;
+}
+#container-movie:hover{
+  border: 0.1rem solid lime;
+  transition: 0.5s;
+}
+a{
+  text-decoration: none;
 }
 
 #movie-image{
@@ -95,4 +103,41 @@ text-overflow: ellipsis;
 #movie-year{
 color: white;
 font-size:small ;
+}
+
+/* for small devices............. */
+@media(max-width:600px){
+  body {
+    margin: 0 2rem;
+  }
+  #navBar {
+    height: 8rem;
+    width: 100%;
+  }
+  #container-navBar {
+    height: auto;
+    width: 25rem;
+    justify-content:space-around
+  }
+
+  #searchBar {
+    height: 2.5rem;
+    width: 15rem;
+    overflow: hidden;
+  }
+  #searchBtn {
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  /* movie-container............ */
+  #container-movie{
+    flex-direction: column;
+    height: 25rem;
+    width: 20rem;
+}
+#movie-image{
+  height: 22rem;
+  width: 100%;
+}
 }
